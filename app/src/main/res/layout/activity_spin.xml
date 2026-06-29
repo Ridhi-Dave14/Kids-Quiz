@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".SpinActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:text="Left Chance :-"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:id="@+id/chance"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:text=""
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:id="@+id/spinChance"/>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/backgroundwheel"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/wheel"
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/mainspin"
+                app:layout_constraintBottom_toTopOf="@+id/imageView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/stoper"
+                app:layout_constraintBottom_toBottomOf="@+id/wheel"
+                app:layout_constraintEnd_toEndOf="@+id/wheel"
+                app:layout_constraintStart_toStartOf="@+id/wheel"
+                app:layout_constraintTop_toTopOf="@+id/wheel"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:id="@+id/ads"/>
+
+        <Button
+            android:id="@+id/spin"
+            style="@style/Widget.Material3.Button.Icon"
+            android:layout_width="200dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/first"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="S P I N"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/adView"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        />
+
+</LinearLayout>

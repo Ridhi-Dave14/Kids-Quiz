@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".SubtractionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Subtraction Quiz "
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/Qno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="33sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/totalQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/10"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/showscore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="left"/>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:max="10"
+            android:progress="0"
+            app:indicatorColor="@color/first"
+            app:trackThickness="14dp"
+            app:trackCornerRadius="50dp"
+            android:indeterminateDuration="10"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_margin="14dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:background="@drawable/item_bg"/>
+
+        <TextView
+            android:id="@+id/option1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="A. "
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="normal"
+            android:background="@drawable/sub_bg"/>
+
+        <TextView
+            android:id="@+id/option2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:text="B. "
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="normal"
+            android:background="@drawable/sub_bg"/>
+
+        <TextView
+            android:id="@+id/option3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:text="C. "
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="normal"
+            android:background="@drawable/sub_bg"/>
+
+        <TextView
+            android:id="@+id/option4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:text="D. "
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="normal"
+            android:background="@drawable/sub_bg"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nextBtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/disable_btn"
+            android:text="Next"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+        <com.google.android.gms.ads.AdView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:id="@+id/adView"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

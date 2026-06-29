@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".AnimationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:text="Left Chance :-"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:id="@+id/chance"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:text=""
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:id="@+id/animationChance"/>
+
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ltAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/animation"
+        tools:ignore="MissingClass" />
+
+    <Button
+        android:id="@+id/start"
+        style="@style/Widget.Material3.Button.Icon"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/first"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:text="S T A R T"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:textSize="15dp"/>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/adView"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        />
+
+</LinearLayout>
